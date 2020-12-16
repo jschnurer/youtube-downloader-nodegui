@@ -51,7 +51,6 @@ const FipperForm: React.FC = () => {
           setOutput(allOutput);
         });
 
-
         cmd.on("exit", (code) => {
           if (code === 0) {
             allOutput += "Download complete.";
