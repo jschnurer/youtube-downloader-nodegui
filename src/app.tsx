@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <Window
         windowIcon={winIcon}
-        windowTitle="Hello 👋🏽"
+        windowTitle="YouTube Ripper"
         minSize={minSize}
       >
         <RipperForm />

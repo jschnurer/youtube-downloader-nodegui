@@ -42,7 +42,7 @@ const FipperForm: React.FC = () => {
         });
 
         cmd.stdout.on("data", (data) => {
-          allOutput += data.toString();
+          allOutput += data.toString() + "\n";
           setOutput(allOutput);
         });
 
@@ -55,10 +55,6 @@ const FipperForm: React.FC = () => {
         cmd.on("exit", (code) => {
           if (code === 0) {
             allOutput += "Download complete.";
-
-            // Open download folder.
-            allOutput += "DirName: " + __dirname + '\n';
-            exec(`start "" "${path.resolve(__dirname)}"`);
           } else {
             allOutput += "Operation failed.";
           }
